@@ -1,0 +1,15 @@
+$verde: Green;
+$rojo: red;
+$blanco: rgb(187, 0, 103);
+
+body{
+    background-color: $verde;
+}
+
+h1{
+    color: $rojo;
+}
+
+p{
+    color: $blanco;
+}
