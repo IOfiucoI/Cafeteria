@@ -1,3 +1,18 @@
+PowerShell: npm install --global gulp-cli
+Verifica Permisos: Get-ExecutionPolicy
+Permisos: Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
+
+npm init
+npm install gulp
+
+Dependencia de desarrollo>>>
 npm install --save-dev gulp
+
+
+Reinstalar node_modules
+npm install
+
+>> Depende CSS
 npm install --save-dev sass gulp-sass
+
 npm install --save-dev postcss
