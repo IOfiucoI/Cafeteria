@@ -14,5 +14,6 @@ npm install
 
 >> Depende CSS
 npm install --save-dev sass gulp-sass
-
+npm install --save-dev gulp-postcss
 npm install --save-dev postcss
+npm install --save-dev gulp-autoprefixer
