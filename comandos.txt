@@ -1,3 +1,8 @@
+node-v16.14.2-x64
+gulp cli 2.3.0
+local 4.0.2
+
+
 PowerShell: npm install --global gulp-cli
 Verifica Permisos: Get-ExecutionPolicy
 Permisos: Set-ExecutionPolicy RemoteSigned -Scope LocalMachine
@@ -17,3 +22,7 @@ npm install --save-dev sass gulp-sass
 npm install --save-dev gulp-postcss
 npm install --save-dev postcss
 npm install --save-dev gulp-autoprefixer
+npm install --save-dev gulp-imagemin@7.1.0
+npm install --save-dev gulp-webp
+npm install --save-dev gulp-avif
+
