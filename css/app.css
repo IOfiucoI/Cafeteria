@@ -363,11 +363,103 @@ h3 {
 }
 
 .bg-primario {
-  background-color: #e8505b;
+  background-color: #5e311e;
 }
 
 .header {
-  color: #000;
+  width: 100%;
+  padding: 5rem 0;
+  position: relative;
+}
+@media (min-width: 480px) {
+  .header {
+    padding: 4rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 3rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 2rem 0;
+  }
+}
+.header::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+}
+.header:hover {
+  background-color: red;
+}
+.header .contenido {
+  margin-top: 5rem;
+  position: relative;
+}
+
+.inicio {
+  background-image: url(../../img/header_inicio.jpg);
+}
+
+.navegador {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .navegador {
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 0;
+  }
+}
+.navegador a {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .navegador a {
+    margin-bottom: 0;
+  }
+}
+.navegador a:hover {
+  color: #c39c63;
+}
+.navegador a.activo {
+  color: #ebe7de;
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .barra {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.barra .logo {
+  width: 50%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .barra .logo {
+    width: 20rem;
+    margin: 0;
+  }
 }
 
 body {
