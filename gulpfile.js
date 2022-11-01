@@ -10,40 +10,40 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 
-function css(done){
+function css(done) {
     src('sass/app.scss')
-    .pipe(sass({outputStyle:'expanded'}))
-    .pipe(postcss([autoprefixer()]) )
-    .pipe(dest('css'))
+        .pipe(sass({ outputStyle: 'expanded' }))
+        .pipe(postcss([autoprefixer()]))
+        .pipe(dest('css'))
     done();
- }
-
-function imagenes(){
-    return src('fotos/**/*')
-    .pipe(imagemin({optimizationLevel:3}))
-    .pipe(dest('img'));
 }
 
-function imgWebp(){
+function imagenes() {
+    return src('fotos/**/*')
+        .pipe(imagemin({ optimizationLevel: 3 }))
+        .pipe(dest('img'));
+}
+
+function imgWebp() {
     const opciones = {
         quality: 50
     }
     return src('fotos/**/*.{png,jpg,jpeg}')
-    .pipe(webp(opciones))
-    .pipe(dest('img'));
+        .pipe(webp(opciones))
+        .pipe(dest('img'));
 }
 
-function imgAvif(){
+function imgAvif() {
     const opciones = {
         quality: 50
     }
     return src('fotos/**/*.{png,jpg}')
-    .pipe(avif(opciones))
-    .pipe(dest('img'));
+        .pipe(avif(opciones))
+        .pipe(dest('img'));
 
 }
 
-function dev(){
+function dev() {
     watch('sass/**/*.scss', css);
     watch('fotos/**/*', imagenes);
 }
