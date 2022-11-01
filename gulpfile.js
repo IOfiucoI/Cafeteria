@@ -20,25 +20,25 @@ function css(done){
 
 function imagenes(){
     return src('fotos/**/*')
-    .pipe(imagemin({optimizationLevel: 5}))
+    .pipe(imagemin({optimizationLevel:3}))
     .pipe(dest('img'));
 }
 
 function imgWebp(){
-    return src('fotos/**/*.{png,jpg,jpeg}')
-    .pipe(webp())
-    .pipe(dest('img'));
-
-}
-
-function minAvif(){
-    const compressAvif = {
-        quality : 50
+    const opciones = {
+        quality: 50
     }
+    return src('fotos/**/*.{png,jpg,jpeg}')
+    .pipe(webp(opciones))
+    .pipe(dest('img'));
 }
+
 function imgAvif(){
+    const opciones = {
+        quality: 50
+    }
     return src('fotos/**/*.{png,jpg}')
-    .pipe(avif(minAvif))
+    .pipe(avif(opciones))
     .pipe(dest('img'));
 
 }
@@ -46,7 +46,6 @@ function imgAvif(){
 function dev(){
     watch('sass/**/*.scss', css);
     watch('fotos/**/*', imagenes);
-
 }
 
 exports.css = css;
@@ -54,4 +53,5 @@ exports.dev = dev;
 exports.imagenes = imagenes;
 exports.imgWebp = imgWebp;
 exports.imgAvif = imgAvif;
-exports.default = series(imagenes, css, dev);
+
+exports.default = series(imagenes, imgWebp, imgAvif, css, dev);
