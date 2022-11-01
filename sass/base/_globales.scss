@@ -1,52 +1,58 @@
 @use 'variables' as v;
 
-html{
+html {
     font-size: 62.5%;
-    
+
     box-sizing: border-box;
 }
 
-*,*:before, *:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-body{
+body {
     font-family: v.$principal;
-    font-size: 6rem;
+    font-size: 1.6rem;
+    background-color: v.$claro;
 }
 
-p{
+p {
     color: v.$negro;
     font-size: 2rem;
 
 }
 
-.contenedor{
+.contenedor {
+    max-width: 1200px;
     width: 95%;
-    max-width: 120rem;
     margin: 0 auto;
-
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
     display: block;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     margin: 0 0 v.$separacion 0;
 }
 
-h1{
-font-size: 3rem;
+h1 {
+    font-size: 3rem;
 }
-h2{
+
+h2 {
     font-size: 2.5rem;
 }
-h3{
+
+h3 {
     font-size: 2rem;
 }
