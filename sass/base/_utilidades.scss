@@ -1,9 +1,17 @@
 @use 'variables' as v;
 
-.text-center{
+.text-center {
     text-align: center;
 }
 
-.bg-primario{
+.bg-primario {
     background-color: v.$primario;
+}
+
+.mn {
+    margin-top: -10rem;
+}
+
+.bg-white {
+    background-color: v.$blanco;
 }

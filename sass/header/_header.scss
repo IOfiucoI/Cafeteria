@@ -3,11 +3,11 @@
 
 .header{
     width: 100%;
-    padding: 5rem 0;
+    padding: 3rem 0;
     position: relative;
 
     @include m.tablet{
-        min-height: 70rem;
+        min-height: 50rem;
     }
 
     &::before {
@@ -18,7 +18,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        opacity: 0.6;
+        opacity: 0.85;
     }
 
     &:hover {
