@@ -5,7 +5,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 
-//Imagen
+//IMG
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const avif = require('gulp-avif');
@@ -28,7 +28,7 @@ function imgWebp() {
     const opciones = {
         quality: 50
     }
-    return src('fotos/**/*.{png,jpg,jpeg}')
+    return src('fotos/**/*.{png,jpg}')
         .pipe(webp(opciones))
         .pipe(dest('img'));
 }

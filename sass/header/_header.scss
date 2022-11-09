@@ -2,7 +2,8 @@
 @use '../base/mixins' as m;
 
 .header{
-    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 3rem 0;
     position: relative;
 
@@ -43,11 +44,15 @@
 }
 
 .inicio {
-    background-image: url(../../img/header_inicio.jpg);
+    background-image: url(/img/header_inicio.jpg);
 
 }
 
 .nosotros{
-    background-image: url(../../img/nosotros_sidebar.jpg);
+    background-image: url(/img/nosotros_sidebar.jpg);
+}
+
+.proceso{
+    background-image: url(/img/header_proceso.jpg);
 }
 
